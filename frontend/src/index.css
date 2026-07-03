@@ -75,7 +75,8 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
   max-width: 960px;
   margin: 0 auto;
   padding: 1.25rem;
@@ -500,4 +501,86 @@ button.danger:hover {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
+}
+
+/* Responsive (mobile) */
+
+@media (max-width: 640px) {
+  .page {
+    padding: 0 1rem 2.5rem;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar__links {
+    gap: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    padding: 1.1rem;
+  }
+
+  /* Stack the search/category filter fields; keep the button full width for easy tapping */
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .filters button {
+    width: 100%;
+  }
+
+  /* Stack action rows so every button is a full-width tap target */
+  .button-row {
+    flex-direction: column;
+  }
+
+  .button-row button,
+  .button-row a {
+    width: 100%;
+  }
+
+  .button-row a button {
+    width: 100%;
+  }
+
+  .recipe-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.9rem;
+  }
+
+  .week-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-list__item {
+    flex-wrap: wrap;
+  }
+
+  .user-list__item button {
+    width: 100%;
+  }
+
+  /* Larger tap targets for the small remove/close icon buttons */
+  .list-input__remove {
+    padding: 0.4rem 0.6rem;
+    font-size: 1.3rem;
+  }
+
+  .tabs {
+    gap: 0.25rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab {
+    padding: 0.6rem 0.7rem;
+    white-space: nowrap;
+  }
 }

@@ -7,7 +7,7 @@ export function Navbar() {
   return (
     <header className="navbar">
       <Link to="/" className="navbar__brand">
-        🍲 Gestão Receitas
+        🍲 Tastlyhub
       </Link>
       <nav className="navbar__links">
         <Link to="/">Receitas</Link>
